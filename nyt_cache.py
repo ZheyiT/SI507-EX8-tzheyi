@@ -43,9 +43,9 @@ def make_request_using_cache(baseurl, params):
     if unique_ident in CACHE_DICTION:
         if is_fresh(CACHE_DICTION[unique_ident]): 
             print("Getting cached data...")
-            return CACHE_DICTION[unique_ident]
+            return CACHE_DICTION[unique_ident] #The function terminate after return.!   
     else:
-        pass #It seems to me that this 2 lines can be deleted.
+        pass #It seems to me that this 2 lines can be deleted. Yes, they can be deleted!
 
     print("Making a request for new data...")
     resp = requests.get(baseurl, params)   # requests.get(baseurl, params)
